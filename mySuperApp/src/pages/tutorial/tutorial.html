@@ -1,0 +1,16 @@
+<ion-header>
+    </ion-header>
+    <ion-content style="background-image: url('./assets/imgs/bg2.jpg');background-size: cover">
+         <img src="./assets/imgs/Un.png" width="95%" height="20%" style="padding-left:3%;padding-top:5%;align-items: center">
+         <div class="b">
+             <ion-slides autoplay="2000" loop="true" speed="800" pager="false">
+               <ion-slide *ngFor="let slide of slider">
+                  <img [src]="slide.image"/>
+               </ion-slide>
+          </ion-slides>
+        </div>
+         <div class="a">
+            <button ion-button round color="secondary" (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
+            <button ion-button round color="danger" (click)="signup()">{{ 'SIGNUP' | translate }}</button>
+        </div>  
+    </ion-content>

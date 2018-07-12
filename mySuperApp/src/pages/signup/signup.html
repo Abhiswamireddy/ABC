@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title align="center">{{ 'SIGNUP' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form (submit)="doSignup()">
+    <img src="./assets/imgs/ex1.gif" height="20%" width="100%">
+    <ion-card>
+      <ion-card-header>SIGNUP</ion-card-header>
+      <ion-card-content>
+    <ion-list no-line>
+
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="account.username" name="username" placeholder="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        
+        <ion-input type="email" [(ngModel)]="account.email" name="email" placeholder="Email"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input type="phone" [(ngModel)]="account.phno" name="phno" placeholder="Mobile number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="account.password" name="password" placeholder="Password"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="temp.conpassword" name="conpassword" placeholder=" Confirm Password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+        <button ion-button round block color="dark" (click)="checkName()">{{ 'SIGNUP' | translate }}</button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>

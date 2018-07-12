@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-card class="img">
+    <img src="../assets/imgs/lll.gif"/>
+    </ion-card>        
+      <ion-item>
+        <ion-label color="primary">Pickup Time</ion-label>
+        <ion-datetime [(ngModel)]="pickuptime" displayFormat="H:mm" pickerFormat="H mm " pl></ion-datetime>
+      </ion-item>
+      <ion-item>
+      <ion-label color="primary">Pickup date</ion-label>
+        <ion-datetime [(ngModel)]="pickupdate" displayFormat="  DD MM YYYY" pickerFormat=" DD MM YYYY" ></ion-datetime>
+      </ion-item>
+      <ion-item>
+      <ion-label color=primary>Pickup location</ion-label> 
+      <ion-select [(ngModel)]="startlocation">
+          <ion-option value="GUNTUR">GUNTUR</ion-option>
+          <ion-option value="HYDERABAD">HYDERABAD</ion-option>
+          <ion-option value="VISHAKAPATNAM">VISHAKAPATNAM</ion-option>
+          <ion-option value="VIJAYAWADA">VIJAYAWADA</ion-option>
+          <ion-option value="PEDDAPURAM">PEDDAPURAM</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary">Drop Time</ion-label>
+          <ion-datetime [(ngModel)]="droptime" displayFormat="H:mm" pickerFormat="H mm " ></ion-datetime>
+          </ion-item>
+          <ion-item>
+          <ion-label color="primary">Drop date</ion-label>
+          <ion-datetime [(ngModel)]="dropdate" displayFormat="  DD MM YYYY" pickerFormat=" DD MM YYYY" ></ion-datetime>
+        </ion-item> 
+        <!-- <ion-item>
+            <ion-label color=primary>Drop location</ion-label>
+          <ion-select [(ngModel)]="endlocation">
+          <ion-option value="Goa">Goa</ion-option>
+          <ion-option value="HYDERABAD">HYDERABAD</ion-option>
+          <ion-option value="VISHAKAPATNAM">VISHAKAPATNAM</ion-option>
+          <ion-option value="VIJAYAWADA">VIJAYAWADA</ion-option>
+          <ion-option value="PEDDAPURAM">PEDDAPURAM</ion-option>
+      </ion-select>
+    </ion-item>-->
+
+        <button ion-button full Outline round color="primary" (click)="search()">Ride Now</button>
+        </ion-content>

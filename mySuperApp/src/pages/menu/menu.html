@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>profile</ion-title>
+</ion-navbar>
+  <div align="center">
+    <br><br><img src="../assets/imgs/profile.jpg" width=120px height=120px/>
+    </div>
+</ion-header>
+
+
+<ion-content class="main4">
+<table *ngFor="let pro of prf">
+  <tr><td class="a"><b>Name:</b>{{pro.username}}</td></tr>
+  <tr><td class="b"><b>Email:</b>{{pro.email}}</td></tr>
+  <tr><td class="c"><b>Phone No:</b>{{pro.phno}}</td></tr>
+  </table>
+  <h2> update your profile<a  align="center">Update</a></h2>
+  <button ion-button round color="primary" (click)="back()" class="z">Back</button>
+</ion-content>

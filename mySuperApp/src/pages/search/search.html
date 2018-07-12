@@ -1,0 +1,1611 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="Search your Bike"></ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+ 
+  <ion-list>
+    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
+      <ion-avatar item-start>
+        <img [src]="item.profilePic" />
+      </ion-avatar>
+      <h2>{{item.name}}</h2>
+      <p>{{item.about}}</p>
+      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+
+   </button>
+   <ion-card>
+    <img src="../../assets/imgs/ktm.jpg"/>
+    <ion-card-content>
+      <ion-card-title>KTM</ion-card-title>
+      <p>KTM AG (the former KTM Sportmotorcycle AG) is an Austrian motorcycle and sports bike</p>
+    </ion-card-content>
+    <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline (click)="success()">
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+  </ion-card>
+  <ion-card>
+      <img src="../../assets/imgs/cbr.png"/>
+      <ion-card-content>
+        <ion-card-title>CBR</ion-card-title>
+        <p>The Honda CBR600RR is a 599 cc (36.6 cu in) sport bike, part of the CBR series that was introduced by Honda in 2003 as a race replica version of Honda's CBR600F series.</p>
+      </ion-card-content>
+      <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1200</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline  (click)="success()">
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/desertstorm_left-side_600x463_motorcycle.png"/>
+      <ion-card-content>
+        <ion-card-title>Desert Storm</ion-card-title>
+        <p>This bike is very useful for providing services to soldiers in harsh conditions.</p>
+      </ion-card-content>
+      <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1000</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline  (click)="success()">
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/classic500_right-side_silver_600x463_motorcycle.png"/>
+      <ion-card-content>
+        <ion-card-title>Royal Enfield Classic</ion-card-title>
+        <p>Royal Enfield Classic 350 and Classic 500 are models of Royal Enfield motorcycles which have been in production since 2009.</p>
+      </ion-card-content>
+      <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1200</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline  (click)="success()">
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/GT-left-red-600x463.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline  (click)="success()">
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/tb500_right-side_stoneblack_600x463_motorcycle.png"/>
+      <ion-card-content>
+        <ion-card-title>Stone Black</ion-card-title>
+        <p></p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline  (click)="success()">
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/thnuderbird.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline  (click)="success()">
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/squadronblue-right-600x463.png"/>
+      <ion-card-content>
+        <ion-card-title>Squadron Blue</ion-card-title>
+        <p>        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline  (click)="success()">
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/pulsar-ns200-r_600x300.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline  (click)="success()">
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/pulsar-150-2018-right-side-view_600x300.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline  (click)="success()">
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/390-duke-right_600x300.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/bajaj-dominar-400_600x300.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/black-color.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/fzs-fi-armada-blue.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/activa.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/cbr.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/cb-shine-white-500x500.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/hero_glamour_30_3.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/honda-cbr-150r.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/honda-cbr250r.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/honda-cbr-650f-millennium-red.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/honda-cb-unicorn-150-pearl-siena-red.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/honda-cb-unicorn-daz-2.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/Honda-CB-Unicorn-HD-Image (1).jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/honda-livo-sunset-brown-metallic.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/honda-x-blade.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/hornet.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/shine.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/tvs_jupiter.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/tvs_max_4.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/tvs-apache-rtr-180-white.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/tvs-star-city.png"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/TVS-Victor.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/tvs-xl-100-red.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/1200px-Kawasaki_Ninja_ZX-6R_ZX600F_Front.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/2010-Yamaha-YZF-R6-Motorcycle.jpg"/>
+      <ion-card-content>
+        <ion-card-title>Nine Inch Nails Live</ion-card-title>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">75</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/2012-Kawasaki-Ninja-ZX-10R-ABS_motorcycle-desktop-wallpapers_3.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/2012-Kawasaki-W800-Special-Edition-3.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+      <img src="../../assets/imgs/2013-Ninja-ZX-10R-ABS-white.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+  
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card>
+        <img src="../../assets/imgs/2017-Yamaha-YZF-R6-fake.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Yamaha R6 Red
+            </ion-card-title>
+          <p>
+            The YZF-R6 was introduced in 1999 as the super sport version of YZF-R1 super bike, and as a companion to the more street-oriented YZF600R sport bike which continued to be sold alongside the R6.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/2018-Yamaha-PW50d.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Yamaha PW-50 blue
+            </ion-card-title>
+          <p>
+            It is a sports bike released by yamaha for on mountain trips 
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/2018-Yamaha-SR400b.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Yamaha SR400
+            </ion-card-title>
+          <p>
+            The Suzuki Boulevard S40 is a lightweight cruiser motorcycle manufactured by the Suzuki Motor Corporation for the Japanese domestic market, and exported to New Zealand, North America, as well as to Chile and other countries.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/060116-kawasaki-w800-3.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Kawsaki 800W
+            </ion-card-title>
+          <p>
+            The Kawasaki W800 is a parallel twin motorcycle produced by Kawasaki from 2011 to 2016. The W800 is a retro style model that emulates the Kawasaki W series
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/100615-2016-Yamaha-Super-Tenere-60th-anniversary.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Yamaha-Super-Tenere
+            </ion-card-title>
+          <p>
+            The Yamaha XT1200Z Super Ténéré is a motorcycle produced by Yamaha Motor Corporation, that was launched in 2010. The XT1200Z is the latest in a series of dual-sport Yamaha motorcycles named after the Ténéré, a desert region in the south central Sahara.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/bajaj bikes.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Kawasaki Ninja Red
+            </ion-card-title>
+          <p>
+            The Kawasaki Ninja 300, or EX300, is a 296 cc (18.1 cu in) Ninja series sport bike introduced by Kawasaki in 2012 for the 2013 model year. 
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/Bajaj-V-Front-View-HD-Wallpaper.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Bajaj-V
+            </ion-card-title>
+          <p>
+            Bajaj V15 is not just built from the metal sourced from the INS Vikrant aircraft carrier used in the 1971 war, but the nameplate too has been derived from the former. Bajaj has worked on an all new design for this 150cc commuter that lends a tough stance to V15.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/big_avenger01.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Bajaj Avenger Black
+            </ion-card-title>
+          <p>
+            The Bajaj Avenger is a cruiser style motorcycle designed and manufactured by Bajaj Auto in India. It draws the styling and other design cues from the Kawasaki Eliminator which had an air-cooled, single-cylinder Kawasaki engine and was sold at a premium
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/exteriora.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Suzuki Gixxer
+            </ion-card-title>
+          <p>
+            The Suzuki Gixxer (GSX-150) is a 154.9 cc (9.45 cu in) naked motorcycle from Suzuki. The bike was launched in September 2014.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/Gixxer.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Suzuki Gixxer
+            </ion-card-title>
+          <p>
+            The Suzuki Gixxer (GSX-150) is a 154.9 cc (9.45 cu in) naked motorcycle from Suzuki. The bike was launched in September 2014.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/kawasaki zx14r.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+            kawasaki Ninja zx14r
+           
+            </ion-card-title>
+          <p>
+            The Kawasaki Ninja ZX-14, is a motorcycle in the Ninja sport bike series from the Japanese manufacturer Kawasaki that was their most powerful sport bike as of 2007. It was introduced at the 2005 Tokyo Motor Show and released for the 2006 model year as a replacement for the ZX-12R. 
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/Kawasaki_Ninja_ZX_10R_ZX1000_C1_2004.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Kawasaki Ninja ZX 10Red
+            </ion-card-title>
+          <p>
+            The Kawasaki Ninja ZX-10R is a motorcycle in the Ninja sport bike series from the Japanese manufacturer Kawasaki, the successor to the Ninja ZX-9R.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>    <ion-card>
+        <img src="../../assets/imgs/p220f.png"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+           Bajaj Pulsar 220F blue
+            </ion-card-title>
+          <p>
+            Pulsar 220F has a mileage of 38 kmpl and a top speed of 134 kmph.
+            New Bajaj Pulsar 220F is one of the best 220cc bikes in India.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/SUZUKI.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+           Suzuki Gixxer
+            </ion-card-title>
+          <p>
+            The Suzuki Gixxer (GSX-150) is a 154.9 cc (9.45 cu in) naked motorcycle from Suzuki. The bike was launched in September 2014.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/suzuki-access-.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+          Suzuki Access
+            </ion-card-title>
+          <p>
+            The Suzuki Access 125 is a scooter manufactured by Suzuki motorcycle india limited , a subsidiary of Japanese motorcycle company Suzuki.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/suzuki-intruder.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            suzuki-intruder
+            </ion-card-title>
+          <p>
+            The Suzuki Intruder is a series of cruiser motorcycles made by Suzuki from 1985 to 2005. After 2005, the Intruder lineup was replaced by the Boulevard range. In Europe, the Intruder name remains in use on certain models
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/suzuki-intruder.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            suzuki-intruder
+            </ion-card-title>
+          <p>
+            The Suzuki Intruder is a series of cruiser motorcycles made by Suzuki from 1985 to 2005. After 2005, the Intruder lineup was replaced by the Boulevard range. In Europe, the Intruder name remains in use on certain models
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/x.pagespeed.ic.3jQNYewnM_.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Honda CBR Green
+            </ion-card-title>
+          <p>
+            The Honda CBR250R is lightweight 249.5–286 cc (15.23–17.45 cu in) displacement single-cylinder motorcycles made by Honda since 2011
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/x.pagespeed.ic.oMn_zeRCMa.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Honda Hornet
+            </ion-card-title>
+          <p>
+            The Honda CB250F is a standard motorcycle which were launched in 1996. This is also known as the Honda Hornet 250 
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/ZMRcolor-main-323.png"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Karizma ZMR Red
+            </ion-card-title>
+          <p>
+            The Hero Karizma ZMR is a motorcycle manufactured in India by Hero Honda. It was a launched as a cosmetic upgrade to Karizma R in September 2009. 
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/FZ.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Yamaha FZ Red
+            </ion-card-title>
+          <p>
+            The Yamaha FZ150i is a lightweight 150 cc motorcycle manufactured by Yamaha Motor Company exclusively for Southeast Asian markets. 
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/FZ1.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+          Yamaha FZ Black
+            </ion-card-title>
+          <p>
+            The Yamaha FZ150i is a lightweight 150 cc motorcycle manufactured by Yamaha Motor Company exclusively for Southeast Asian markets. 
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/FZ2.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Yamaha FZ Yellow
+            </ion-card-title>
+          <p>
+            The Yamaha FZ150i is a lightweight 150 cc motorcycle manufactured by Yamaha Motor Company exclusively for Southeast Asian markets. 
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/Harley-Davidson.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Harley-Davidson Yellow
+            </ion-card-title>
+          <p>
+            Harley-Davidson had to obtain the "XR1200" naming rights from Storz Performance, a Harley customizing shop in Ventura, Calif.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/Harley-Davidson1.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+           Harley-Davidson XR 1200 Black
+            </ion-card-title>
+          <p>
+            Harley-Davidson had to obtain the "XR1200" naming rights from Storz Performance, a Harley customizing shop in Ventura, Calif. The XR1200 was released
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/hunk-1.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Hero-Honda Hunk Silver
+            </ion-card-title>
+          <p>
+            The Hero Hunk is a 150 cc motorcycle launched by Hero Honda in October 2007. It is offered in two variants, kick-start and self-start. The new 2011 model
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/triumph-motorcycles-6.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Triumph Bonneville
+            </ion-card-title>
+          <p>
+            The Triumph Bonneville T120 was a Triumph Engineering motorcycle made from 1959 through 1975. It was the first model of the Bonneville series
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/Harley-Davidson-V-Rod1.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Harley-Davidson-V-Rod
+            </ion-card-title>
+          <p>
+            The Harley-Davidson VRSC (V-Twin Racing Street Custom), or V-Rod, was a line of V-twin muscle bikes, produced by Harley-Davidson from 2001 until 2017.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/Harley-Davidson-Bat-Bike-V-Rod-passion4luxury-1.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Harley-Davidson-V-Rod Black
+            </ion-card-title>
+          <p>
+            The Harley-Davidson VRSC (V-Twin Racing Street Custom), or V-Rod, was a line of V-twin muscle bikes, produced by Harley-Davidson from 2001 until 2017.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/2017-bmw-s1000rr.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            BMW s1000
+            </ion-card-title>
+          <p>
+            The BMW S1000RR is a sport bike initially made by BMW Motorrad to compete in the 2009 Superbike World Championship, that is now in commercial production
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/072115bottom.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Nine Inch Nails Live
+            </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/71750PK3-m_m_y-BMW-S1000R-2017.jpeg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Nine Inch Nails Live
+            </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/Marken_BMW_Motorrad_Gruppe.png"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Nine Inch Nails Live
+            </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/finedata_A0219110.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Nine Inch Nails Live
+            </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/201-bmw-motorcycle-pricing-usa-2.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Nine Inch Nails Live
+            </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+         <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <button ion-button outline>
+              <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+            </button>
+          </ion-col>
+      </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="../../assets/imgs/bmw1.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Nine Inch Nails Live
+            </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>    <ion-card>
+        <img src="../../assets/imgs/2016-Ducati-XDiavel-beauty-2244.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+    
+            Nine Inch Nails Live
+            </ion-card-title>
+          <p>
+            Ducati Motor Holding S.p.A. is the motorcycle-manufacturing division of Italian company Ducati, headquartered in Bologna,
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col text-left>
+            <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+            <ion-col text-right>
+              <button ion-button outline>
+                <ion-icon name="cart" style="zoom:2.5"></ion-icon>
+              </button>
+            </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+  </ion-content>

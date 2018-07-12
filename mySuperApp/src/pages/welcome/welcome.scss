@@ -1,0 +1,48 @@
+page-list-master {
+  .card-background-page{
+      
+      ion-card{
+      
+          text-align: center;
+          height: 60%;
+          width: 100%;
+      }
+    
+      .card-title{
+           top: 50%;
+          left: 40%;
+          color: black;
+          display: inline-block;
+          
+      }
+      video{
+          height: auto;
+          width: auto;
+      }
+      .card-title:hover{
+          background-color: orangered;
+          width: 20%;
+          height: 10%;
+          margin-top: 20%;
+          margin-left: -20%;
+      }
+      ion-label{
+          color: black;
+          width: 20%;
+          display: inline-block;
+          font-size: 12px;
+      }
+      .ion-grid{
+          
+          width: 50%;
+          height: 50%;
+          margin-left: 0%;
+      }
+      #loc{
+          margin-left: 5%;
+      }
+  }
+  #pp{
+      text-align: center;
+  }
+}

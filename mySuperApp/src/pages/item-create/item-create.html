@@ -1,0 +1,28 @@
+<ion-content>
+ 
+  <ion-list>
+    <button ion-item (click)="openItem(item)" *ngFor="let item of currentItems">
+      <ion-avatar item-start>
+        <img [src]="item.profilePic" />
+      </ion-avatar>
+      <h2>{{item.name}}</h2>
+      <p>{{item.about}}</p>
+      <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+
+   </button>
+   <ion-card>
+    <img src="../../assets/imgs/ktm.jpg"/>
+    <ion-card-content>
+      <ion-card-title>KTM</ion-card-title>
+      <p>KTM AG (the former KTM Sportmotorcycle AG) is an Austrian motorcycle and sports bike</p>
+    </ion-card-content>
+    <ion-row>
+        <ion-col text-left>
+          <ion-icon name="pricetag" style="zoom:2.0">1500</ion-icon></ion-col>
+          <ion-col text-right>
+            <p>your item booked</p>
+          </ion-col>
+      </ion-row>
+  </ion-card>
+</ion-list>
+</ion-content>
